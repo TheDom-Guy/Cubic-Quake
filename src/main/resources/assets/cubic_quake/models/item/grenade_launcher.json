@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "cubic_quake:item/grenade_launcher"
+  }
+}

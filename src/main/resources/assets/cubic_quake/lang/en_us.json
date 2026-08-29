@@ -3,8 +3,15 @@
   "item.cubic_quake.nail": "Nail",
   "item.cubic_quake.cell": "Cell",
   "item.cubic_quake.rocket": "Rocket",
+
+  "item.cubic_quake.axe": "Axe",
   "item.cubic_quake.shotgun": "Shotgun",
   "item.cubic_quake.double_barrelled_shotgun": "Double Barrelled Shotgun",
+  "item.cubic_quake.nailgun": "Nailgun",
+  "item.cubic_quake.super_nailgun": "Super Nailgun",
+  "item.cubic_quake.thunderbolt": "Thunderbolt",
+  "item.cubic_quake.grenade_launcher": "Grenade Launcher",
+  "item.cubic_quake.rocket_launcher": "Rocket Launcher",
 
   "itemgroup.cubic_quake.items": "Cubic Quake",
 
