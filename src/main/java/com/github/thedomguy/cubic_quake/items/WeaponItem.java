@@ -37,27 +37,16 @@ public class WeaponItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
-        if (world instanceof ServerWorld serverWorld) {
+        if (world instanceof ServerWorld) {
             firing = true;
-
-         /*   if (fireDelay <= 0) {
-                if (user.getOffHandStack().getItem() == ammo) {
-                    fireDelay = firerate;
-                    if (!user.isCreative()) {
-                        user.getOffHandStack().decrement(ammoConsumption);
-                    }
-                    projectile.spawn(serverWorld, user.getBlockPos(), SpawnReason.TRIGGERED);
-                }
-            }*/
         }
 
-        return TypedActionResult.consume(itemStack);
+        return TypedActionResult.pass(itemStack);
     }
 
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
-        if (world instanceof ServerWorld serverWorld) {
-            CubicQuake.print("cheese");
+        if (world instanceof ServerWorld) {
             firing = false;
         }
     }
@@ -66,12 +55,15 @@ public class WeaponItem extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (world instanceof ServerWorld serverWorld && entity instanceof PlayerEntity user) {
             if (fireDelay <= 0 && firing) {
-                if (user.getOffHandStack().getItem() == ammo) {
+                if (user.isCreative()) {
                     fireDelay = firerate;
-                    if (!user.isCreative()) {
-                        user.getOffHandStack().decrement(ammoConsumption);
-                    }
                     projectile.spawn(serverWorld, user.getBlockPos(), SpawnReason.TRIGGERED);
+                } else {
+                    if (user.getOffHandStack().getItem() == ammo) {
+                        fireDelay = firerate;
+                        user.getOffHandStack().decrement(ammoConsumption);
+                        projectile.spawn(serverWorld, user.getBlockPos(), SpawnReason.TRIGGERED);
+                    }
                 }
             } else {
                 fireDelay -= 1;
