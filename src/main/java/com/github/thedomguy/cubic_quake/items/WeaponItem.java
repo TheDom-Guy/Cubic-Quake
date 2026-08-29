@@ -25,7 +25,7 @@ public class WeaponItem extends Item {
     private boolean firing = false;
 
     public WeaponItem(Settings settings, Weapons weapon) {
-        super(settings);
+        super(settings.maxCount(1));
         damage = weapon.DAMAGE();
         ammo = weapon.AMMO();
         firerate = weapon.FIRERATE();

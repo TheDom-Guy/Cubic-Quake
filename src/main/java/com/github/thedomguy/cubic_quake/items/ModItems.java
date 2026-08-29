@@ -24,7 +24,7 @@ public class ModItems {
     public static final Item ROCKET = registerItem("rocket", new Item(new Item.Settings()));
 
     //Weapons
-    public static final Item AXE = registerItem("axe", new Item(new Item.Settings().attributeModifiers(AttributeModifiersComponent.builder()
+    public static final Item AXE = registerItem("axe", new Item(new Item.Settings().maxCount(1).attributeModifiers(AttributeModifiersComponent.builder()
             .add(
                     EntityAttributes.GENERIC_ATTACK_DAMAGE,
                     new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 1.0, EntityAttributeModifier.Operation.ADD_VALUE),
@@ -46,7 +46,9 @@ public class ModItems {
     public static final Item ROCKET_LAUNCHER = registerItem("rocket_launcher", new WeaponItem(new Item.Settings(), Weapons.ROCKET_LAUNCHER));
 
     //Powerups
-
+    public static final Item QUAD_DAMAGE = registerItem("quad_damage", new PowerupItem(new Item.Settings(), Powerups.QUAD_DAMAGE));
+    public static final Item RING_OF_SHADOWS = registerItem("ring_of_shadows", new PowerupItem(new Item.Settings(), Powerups.RING_OF_SHADOWS));
+    public static final Item PENTAGRAM_OF_PROTECTION = registerItem("pentagram_of_protection", new PowerupItem(new Item.Settings(), Powerups.PENTAGRAM_OF_PROTECTION));
 
     //Creative Tab
     public static final ItemGroup CUBIC_QUAKE_ITEMS = Registry.register(Registries.ITEM_GROUP,
@@ -68,6 +70,9 @@ public class ModItems {
                         entries.add(NAIL);
                         entries.add(CELL);
                         entries.add(ROCKET);
+                        entries.add(QUAD_DAMAGE);
+                        entries.add(RING_OF_SHADOWS);
+                        entries.add(PENTAGRAM_OF_PROTECTION);
 
                     })
                     .build()

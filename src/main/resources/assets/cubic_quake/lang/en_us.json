@@ -13,6 +13,10 @@
   "item.cubic_quake.grenade_launcher": "Grenade Launcher",
   "item.cubic_quake.rocket_launcher": "Rocket Launcher",
 
+  "item.cubic_quake.quad_damage": "Quad Damage",
+  "item.cubic_quake.ring_of_shadows": "Ring of Shadows",
+  "item.cubic_quake.pentagram_of_protection": "Pentagram of Protection",
+
   "itemgroup.cubic_quake.items": "Cubic Quake",
 
   "advancements.adventure.get_poor_mace.title": "Just Couldn't Wait",

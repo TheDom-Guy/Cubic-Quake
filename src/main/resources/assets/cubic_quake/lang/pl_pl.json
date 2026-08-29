@@ -1,0 +1,21 @@
+{
+  "item.cubic_quake.shell": "Amunicja Śrutowa",
+  "item.cubic_quake.nail": "Gwóźdź",
+  "item.cubic_quake.cell": "Bateria",
+  "item.cubic_quake.rocket": "Rakieta",
+
+  "item.cubic_quake.axe": "Topór",
+  "item.cubic_quake.shotgun": "Strzelba",
+  "item.cubic_quake.double_barrelled_shotgun": "Dwulufowa Strzelba",
+  "item.cubic_quake.nailgun": "Gwoździarka",
+  "item.cubic_quake.super_nailgun": "Super Gwoździarka",
+  "item.cubic_quake.thunderbolt": "Piorun",
+  "item.cubic_quake.grenade_launcher": "Granatnik",
+  "item.cubic_quake.rocket_launcher": "Wyrzutnia Rakiet",
+
+  "item.cubic_quake.quad_damage": "Cztero-grzmot",
+  "item.cubic_quake.ring_of_shadows": "Pierścień Cieni",
+  "item.cubic_quake.pentagram_of_protection": "Pentagram Chronienia",
+
+  "itemgroup.cubic_quake.items": "Kańciasty Quake"
+}
