@@ -20,4 +20,8 @@ public class CubicQuake implements ModInitializer {
 	public static Identifier id(String path) {
 		return Identifier.of(MOD_ID, path);
 	}
+
+	public static void print(String text) {
+		LOGGER.info(text);
+	}
 }
