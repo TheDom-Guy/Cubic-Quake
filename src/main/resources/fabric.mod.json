@@ -3,15 +3,11 @@
 	"id": "cubic_quake",
 	"version": "${version}",
 	"name": "Cubic Quake",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Quake but square",
 	"authors": [
-		"Me!"
+		"RedShroo"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
+	"license": "ARR",
 	"icon": "assets/cubic_quake/icon.png",
 	"environment": "*",
 	"entrypoints": {
