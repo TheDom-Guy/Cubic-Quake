@@ -1,0 +1,11 @@
+{
+  "item.cubic_quake.shell": "Shell",
+  "item.cubic_quake.nail": "Nail",
+  "item.cubic_quake.cell": "Cell",
+  "item.cubic_quake.rocket": "Rocket",
+
+  "itemgroup.cubic_quake.items": "Cubic Quake",
+
+  "advancements.adventure.get_poor_mace.title": "Just Couldn't Wait",
+  "advancements.adventure.get_poor_mace.description": "Obtain the Poor Man's Mace"
+}
