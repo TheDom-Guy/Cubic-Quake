@@ -2,10 +2,8 @@ package com.github.thedomguy.cubic_quake.items;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -20,7 +18,7 @@ public class ModItems {
     public static final Item ROCKET = registerItem("rocket", new Item(new Item.Settings()));
 
     //Weapons
-
+    public static final Item TEST = registerItem("test_weapon", new WeaponBase(new Item.Settings()));
 
     //Powerups
 
