@@ -18,7 +18,8 @@ public class ModItems {
     public static final Item ROCKET = registerItem("rocket", new Item(new Item.Settings()));
 
     //Weapons
-    public static final Item TEST = registerItem("test_weapon", new WeaponBase(new Item.Settings()));
+    public static final Item SHOTGUN = registerItem("shotgun", new WeaponItem(new Item.Settings(), Weapons.SHOTGUN));
+    public static final Item DOUBLE_BARRElLED_SHOTGUN = registerItem("double_barrelled_shotgun", new WeaponItem(new Item.Settings(), Weapons.DOUBLE_BARRElLED_SHOTGUN));
 
     //Powerups
 
@@ -35,6 +36,8 @@ public class ModItems {
                         entries.add(NAIL);
                         entries.add(CELL);
                         entries.add(ROCKET);
+                        entries.add(SHOTGUN);
+                        entries.add(DOUBLE_BARRElLED_SHOTGUN);
 
                     })
                     .build()

@@ -1,31 +1,33 @@
 package com.github.thedomguy.cubic_quake.items;
 
-import com.github.thedomguy.cubic_quake.CubicQuake;
-import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class WeaponBase extends Item {
+public class WeaponItem extends Item {
 
-    private final int damage = 0;
-    private final Item ammo = Items.ARROW;
-    private final int firerate = 20;
-    private final EntityType projectile = EntityType.ARROW;
-    private final int ammoConsuption = 1;
+    private final int damage;
+    private final Item ammo;
+    private final int firerate;
+    private final EntityType projectile;
+    private final int ammoConsumption;
 
     private int fireDelay = 0;
 
-    public WeaponBase(Settings settings) {
+    public WeaponItem(Settings settings, Weapons weapon) {
         super(settings);
+        damage = weapon.DAMAGE();
+        ammo = weapon.AMMO();
+        firerate = weapon.FIRERATE();
+        projectile = weapon.PROJECTILE();
+        ammoConsumption = weapon.AMMO_CONSUMPTION();
     }
 
     @Override
@@ -36,7 +38,7 @@ public class WeaponBase extends Item {
                 if (user.getOffHandStack().getItem() == ammo) {
                     fireDelay = firerate;
                     if (!user.isCreative()) {
-                        user.getOffHandStack().decrement(ammoConsuption);
+                        user.getOffHandStack().decrement(ammoConsumption);
                     }
                     projectile.spawn(serverWorld, user.getBlockPos(), SpawnReason.TRIGGERED);
                 }
