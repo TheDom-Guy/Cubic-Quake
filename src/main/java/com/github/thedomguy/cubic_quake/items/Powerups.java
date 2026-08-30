@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.entry.RegistryEntry;
 
 public enum Powerups {
+
     DEFAULT(StatusEffects.ABSORPTION, 20),
 
     QUAD_DAMAGE(StatusEffects.STRENGTH, 200),

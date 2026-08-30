@@ -29,6 +29,9 @@ public class PowerupItem extends Item {
 
         StatusEffectInstance instance = new StatusEffectInstance(effect, duration, 0, false, true, true);
         user.addStatusEffect(instance);
+        if (!user.isCreative()) {
+            itemStack.decrement(1);
+        }
 
         return TypedActionResult.pass(itemStack);
     }

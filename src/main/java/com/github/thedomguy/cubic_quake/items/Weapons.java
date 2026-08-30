@@ -6,7 +6,6 @@ import net.minecraft.item.Items;
 
 public enum Weapons {
 
-
     DEFAULT(0, Items.ARROW, 20, EntityType.ARROW, 1),
     AXE(1, null, 20, EntityType.COW, 0),
 
@@ -17,11 +16,6 @@ public enum Weapons {
     THUNDERBOLT(4, ModItems.CELL, 2, EntityType.SHEEP, 1),
     GRENADE_LAUNCHER(10, ModItems.ROCKET, 13, EntityType.PIG, 1),
     ROCKET_LAUNCHER(20, ModItems.ROCKET, 15, EntityType.SLIME, 1);
-
-
-
-
-
 
     private final int d;
     private final Item a;
