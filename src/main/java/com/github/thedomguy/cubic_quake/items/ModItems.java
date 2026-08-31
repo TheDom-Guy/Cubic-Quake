@@ -54,7 +54,7 @@ public class ModItems {
     public static final ItemGroup CUBIC_QUAKE_ITEMS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(CubicQuake.MOD_ID, "cubic_quake_items"),
             FabricItemGroup.builder()
-                    .icon(() -> new ItemStack(ModItems.SHELL))
+                    .icon(() -> new ItemStack(ModItems.QUAD_DAMAGE))
                     .displayName(Text.translatable("itemgroup.cubic_quake.items"))
                     .entries((displayContext, entries) -> {
 

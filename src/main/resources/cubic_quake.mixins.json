@@ -3,7 +3,7 @@
 	"package": "com.github.thedomguy.cubic_quake.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"PlayerArmPoseMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
