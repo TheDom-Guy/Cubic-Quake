@@ -1,9 +1,7 @@
 package com.github.thedomguy.cubic_quake.items;
 
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
 import net.minecraft.registry.entry.RegistryEntry;
 
 public enum Powerups {

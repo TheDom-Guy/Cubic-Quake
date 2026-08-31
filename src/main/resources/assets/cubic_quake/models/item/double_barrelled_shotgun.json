@@ -1,6 +1,124 @@
 {
-  "parent": "item/handheld",
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    64,
+    64
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        -1.5,
+        3
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        -1.5,
+        3
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        -2.75,
+        0,
+        6.5
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        -2.75,
+        0,
+        6.5
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        -1.5,
+        10
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        20,
+        140,
+        0
+      ],
+      "translation": [
+        6,
+        0,
+        0
+      ],
+      "scale": [
+        1.4,
+        1.4,
+        1.4
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "translation": [
+        -9.5,
+        -2.5,
+        0
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "on_shelf": {
+      "rotation": [
+        -90,
+        35.5,
+        90
+      ],
+      "translation": [
+        6.75,
+        0,
+        0
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    }
+  },
   "textures": {
-    "layer0": "cubic_quake:item/double_barrelled_shotgun"
+    "particle": "cubic_quake:item/double_barreled_shotgun"
   }
 }

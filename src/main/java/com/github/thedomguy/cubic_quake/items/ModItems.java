@@ -1,8 +1,8 @@
 package com.github.thedomguy.cubic_quake.items;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
+import com.github.thedomguy.cubic_quake.items.weapons.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -37,13 +37,13 @@ public class ModItems {
             )
             .build())));
    // public static final Item AXE = registerItem("axe", new WeaponItem(new Item.Settings(), Weapons.AXE));
-    public static final Item SHOTGUN = registerItem("shotgun", new WeaponItem(new Item.Settings(), Weapons.SHOTGUN));
-    public static final Item DOUBLE_BARRElLED_SHOTGUN = registerItem("double_barrelled_shotgun", new WeaponItem(new Item.Settings(), Weapons.DOUBLE_BARRElLED_SHOTGUN));
-    public static final Item NAILGUN = registerItem("nailgun", new WeaponItem(new Item.Settings(), Weapons.NAILGUN));
-    public static final Item SUPER_NAILGUN = registerItem("super_nailgun", new WeaponItem(new Item.Settings(), Weapons.SUPER_NAILGUN));
-    public static final Item THUNDERBOLT = registerItem("thunderbolt", new WeaponItem(new Item.Settings(), Weapons.THUNDERBOLT));
-    public static final Item GRENADE_LAUNCHER = registerItem("grenade_launcher", new WeaponItem(new Item.Settings(), Weapons.GRENADE_LAUNCHER));
-    public static final Item ROCKET_LAUNCHER = registerItem("rocket_launcher", new WeaponItem(new Item.Settings(), Weapons.ROCKET_LAUNCHER));
+    public static final Item SHOTGUN = registerItem("shotgun", new ShotgunItem(new Item.Settings(), Weapons.SHOTGUN));
+    public static final Item DOUBLE_BARRElLED_SHOTGUN = registerItem("double_barrelled_shotgun", new DoubleBarrelledShotgunItem(new Item.Settings(), Weapons.DOUBLE_BARRElLED_SHOTGUN));
+    public static final Item NAILGUN = registerItem("nailgun", new NailgunItem(new Item.Settings(), Weapons.NAILGUN));
+    public static final Item SUPER_NAILGUN = registerItem("super_nailgun", new SuperNailgunItem(new Item.Settings(), Weapons.SUPER_NAILGUN));
+    public static final Item THUNDERBOLT = registerItem("thunderbolt", new ThunderboltItem(new Item.Settings(), Weapons.THUNDERBOLT));
+    public static final Item GRENADE_LAUNCHER = registerItem("grenade_launcher", new GrenadeLauncherItem(new Item.Settings(), Weapons.GRENADE_LAUNCHER));
+    public static final Item ROCKET_LAUNCHER = registerItem("rocket_launcher", new RocketLauncherItem(new Item.Settings(), Weapons.ROCKET_LAUNCHER));
 
     //Powerups
     public static final Item QUAD_DAMAGE = registerItem("quad_damage", new PowerupItem(new Item.Settings(), Powerups.QUAD_DAMAGE));
