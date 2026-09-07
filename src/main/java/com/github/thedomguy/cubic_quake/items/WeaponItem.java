@@ -1,5 +1,6 @@
 package com.github.thedomguy.cubic_quake.items;
 
+import com.github.thedomguy.cubic_quake.CubicQuake;
 import com.github.thedomguy.cubic_quake.items.client.NailgunRenderer;
 import com.github.thedomguy.cubic_quake.items.weapons.NailgunItem;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
@@ -7,7 +8,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.NameTagItem;
@@ -99,7 +102,12 @@ public class WeaponItem extends Item implements GeoItem {
 
     private void fireLogic(ServerWorld serverWorld, PlayerEntity user, ItemStack stack) {
         fireDelay = firerate;
-        projectile.spawn(serverWorld, user.getBlockPos(), SpawnReason.TRIGGERED);
+        if (projectile.create(serverWorld) instanceof ProjectileEntity p) {
+            p.setVelocity(user, user.getPitch(), user.getYaw(), 0, 10, 0);
+            p.setPosition(user.getPos());
+
+            serverWorld.spawnEntity(p);
+        }
         if (this instanceof NailgunItem) {
             nailgunAnim(serverWorld, user, stack);
         } else {

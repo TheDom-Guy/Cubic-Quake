@@ -1,5 +1,6 @@
 package com.github.thedomguy.cubic_quake;
 
+import com.github.thedomguy.cubic_quake.entities.ModEntities;
 import com.github.thedomguy.cubic_quake.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,6 +16,7 @@ public class CubicQuake implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModEntities.registerModEntities();
 	}
 
 	public static Identifier id(String path) {

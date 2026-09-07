@@ -13,6 +13,9 @@
 	"entrypoints": {
 		"main": [
 			"com.github.thedomguy.cubic_quake.CubicQuake"
+		],
+		"client": [
+			"com.github.thedomguy.cubic_quake.CubicQuakeClient"
 		]
 	},
 	"mixins": [

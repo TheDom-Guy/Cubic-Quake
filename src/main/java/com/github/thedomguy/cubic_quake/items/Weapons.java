@@ -1,5 +1,6 @@
 package com.github.thedomguy.cubic_quake.items;
 
+import com.github.thedomguy.cubic_quake.entities.ModEntities;
 import com.github.thedomguy.cubic_quake.items.client.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -13,7 +14,7 @@ public enum Weapons {
 
     SHOTGUN(1, ModItems.SHELL, 11, EntityType.CHICKEN, 1, new ShotgunRenderer()),
     DOUBLE_BARRElLED_SHOTGUN(1, ModItems.SHELL, 15, EntityType.HORSE, 2, new DoubleBarrelledShotgunRenderer()),
-    NAILGUN(2, ModItems.NAIL, 2, EntityType.SALMON, 1, new NailgunRenderer()),
+    NAILGUN(2, ModItems.NAIL, 2, ModEntities.NAIL_PROJECTILE, 1, new NailgunRenderer()),
     SUPER_NAILGUN(4, ModItems.NAIL, 2, EntityType.COD, 2, new SuperNailgunRenderer()),
     THUNDERBOLT(4, ModItems.CELL, 3, EntityType.SHEEP, 1, new ThunderboltRenderer()),
     GRENADE_LAUNCHER(10, ModItems.ROCKET, 14, EntityType.PIG, 1, new GrenadeLauncherRenderer()),
