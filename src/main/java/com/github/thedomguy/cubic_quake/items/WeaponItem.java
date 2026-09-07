@@ -1,6 +1,7 @@
 package com.github.thedomguy.cubic_quake.items;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
+import com.github.thedomguy.cubic_quake.entities.WeaponProjectile;
 import com.github.thedomguy.cubic_quake.items.client.NailgunRenderer;
 import com.github.thedomguy.cubic_quake.items.weapons.NailgunItem;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
@@ -84,14 +85,11 @@ public class WeaponItem extends Item implements GeoItem {
             if (fireDelay <= 0 && firing) {
                 if (user.isCreative()) {
                     fireLogic(serverWorld, user, stack);
-
                 } else {
                     if (user.getOffHandStack().getItem() == ammo) {
-
                         user.getOffHandStack().decrement(ammoConsumption);
 
                         fireLogic(serverWorld, user, stack);
-
                     }
                 }
             } else {
@@ -102,9 +100,8 @@ public class WeaponItem extends Item implements GeoItem {
 
     private void fireLogic(ServerWorld serverWorld, PlayerEntity user, ItemStack stack) {
         fireDelay = firerate;
-        if (projectile.create(serverWorld) instanceof ProjectileEntity p) {
-            p.setVelocity(user, user.getPitch(), user.getYaw(), 0, 10, 0);
-            p.setPosition(user.getPos());
+        if (projectile.create(serverWorld) instanceof WeaponProjectile p) {
+            p.setUp(damage, user);
 
             serverWorld.spawnEntity(p);
         }
