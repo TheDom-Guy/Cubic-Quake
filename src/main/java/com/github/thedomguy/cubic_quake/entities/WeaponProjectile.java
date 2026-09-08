@@ -1,15 +1,19 @@
 package com.github.thedomguy.cubic_quake.entities;
 
+import com.github.thedomguy.cubic_quake.CubicQuake;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class WeaponProjectile extends ProjectileEntity {
 
     protected float dmg = 0;
+    protected int lifespan = 100;
+    protected int speed = 1;
 
     public WeaponProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
@@ -17,8 +21,14 @@ public class WeaponProjectile extends ProjectileEntity {
 
     public void setUp(float damage, PlayerEntity user) {
         dmg = damage;
-        setVelocity(user, user.getPitch(), user.getYaw(), 0, 1, 0);
+
+        float f = -MathHelper.sin(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
+        float g = -MathHelper.sin(user.getPitch() * ((float)Math.PI / 180F));
+        float h = MathHelper.cos(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
+        this.setVelocity(f, g, h, speed, 0);
+
         setPosition(user.getPos().add(0, 1, 0));
+        CubicQuake.print(getVelocity().toString());
     }
 
 

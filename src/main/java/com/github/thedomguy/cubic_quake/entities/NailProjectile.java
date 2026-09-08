@@ -1,14 +1,14 @@
 package com.github.thedomguy.cubic_quake.entities;
 
+import com.github.thedomguy.cubic_quake.CubicQuake;
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
@@ -17,11 +17,17 @@ import net.minecraft.world.World;
 public class NailProjectile extends WeaponProjectile{
     public NailProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
+        speed = 2;
     }
 
     @Override
     public void tick() {
         super.tick();
+        --lifespan;
+        if (lifespan <= 0) {
+            this.discard();
+        }
+
         Vec3d vec3d = this.getVelocity();
         HitResult hitResult = ProjectileUtil.getCollision(this, this::canHit);
         this.hitOrDeflect(hitResult);
@@ -39,16 +45,12 @@ public class NailProjectile extends WeaponProjectile{
 
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
-        super.onEntityHit(entityHitResult);
-        Entity entity = this.getOwner();
-        if (entity instanceof LivingEntity livingEntity) {
-            entity = entityHitResult.getEntity();
-            DamageSource damageSource = this.getDamageSources().mobProjectile(this, livingEntity);
-            if (entity.damage(damageSource, dmg)) {
-                if (this.getWorld() instanceof ServerWorld serverWorld) {
-                    EnchantmentHelper.onTargetDamaged(serverWorld, entity, damageSource);
-                }
-            }
+        Entity hit = entityHitResult.getEntity();
+        if (hit instanceof LivingEntity && !(hit == getOwner())) {
+            DamageSource ds = new DamageSource(this.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE));
+            hit.damage(ds, dmg);
+
+            this.discard();
         }
     }
 }
