@@ -26,14 +26,6 @@ public class NailProjectileRenderer extends EntityRenderer<NailProjectile> {
 
     @Override
     public void render(NailProjectile nailProjectile, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-       /* matrixStack.push();
-        matrixStack.scale(1, -1, -1);
-        this.model.setAngles(nailProjectile, g, 0.0F, -0.1F, 0.0F, 0.0F);
-        VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(this.model.getLayer(TEXTURE));
-        this.model.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV);
-        matrixStack.pop();
-        super.render(nailProjectile, f, g, matrixStack, vertexConsumerProvider, i);*/
-
         matrixStack.push();
         matrixStack.scale(1, -1, -1);
         matrixStack.translate(0, -0.275, 0);
