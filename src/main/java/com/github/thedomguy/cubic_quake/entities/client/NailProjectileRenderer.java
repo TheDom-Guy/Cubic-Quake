@@ -32,7 +32,6 @@ public class NailProjectileRenderer extends EntityRenderer<NailProjectile> {
 
         matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-nailProjectile.getYaw()));
         matrixStack.multiply(RotationAxis.NEGATIVE_X.rotationDegrees(nailProjectile.getPitch()));
-        CubicQuake.print(nailProjectile.getYaw() + " " + nailProjectile.getPitch());
 
         VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(this.model.getLayer(TEXTURE));
         this.model.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV);
