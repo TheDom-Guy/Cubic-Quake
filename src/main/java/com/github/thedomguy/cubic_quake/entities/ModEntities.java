@@ -12,7 +12,7 @@ public class ModEntities {
             Registries.ENTITY_TYPE,
             Identifier.of(CubicQuake.MOD_ID, "nail_projectile"),
             EntityType.Builder.create(NailProjectile::new, SpawnGroup.MISC)
-                    .dimensions(0.35f, 0.35f)
+                    .dimensions(0.3f, 0.3f)
                     .build()
     );
 
