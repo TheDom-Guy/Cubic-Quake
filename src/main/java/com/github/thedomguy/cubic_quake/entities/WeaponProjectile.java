@@ -1,6 +1,8 @@
 package com.github.thedomguy.cubic_quake.entities;
 
+import com.github.thedomguy.cubic_quake.CubicQuake;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -13,6 +15,7 @@ public class WeaponProjectile extends ProjectileEntity {
     protected float dmg = 0;
     protected int lifespan = 100;
     protected float speed = 1;
+    protected DamageSource ds;
 
     public WeaponProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
@@ -21,6 +24,8 @@ public class WeaponProjectile extends ProjectileEntity {
     public void setUp(float damage, PlayerEntity user) {
         dmg = damage;
         setOwner(user);
+
+        ds = new DamageSource(this.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE), getOwner());
 
         float f = -MathHelper.sin(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
         float g = -MathHelper.sin(user.getPitch() * ((float)Math.PI / 180F));

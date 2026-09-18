@@ -47,7 +47,6 @@ public class NailProjectile extends WeaponProjectile{
     protected void onEntityHit(EntityHitResult entityHitResult) {
         Entity hit = entityHitResult.getEntity();
         if (hit instanceof LivingEntity && !(hit == getOwner())) {
-            DamageSource ds = new DamageSource(this.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE), getOwner());
             hit.damage(ds, dmg);
 
             this.discard();
