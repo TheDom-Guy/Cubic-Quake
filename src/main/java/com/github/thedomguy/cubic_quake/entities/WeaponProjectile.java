@@ -12,7 +12,7 @@ public class WeaponProjectile extends ProjectileEntity {
 
     protected float dmg = 0;
     protected int lifespan = 100;
-    protected int speed = 1;
+    protected float speed = 1;
 
     public WeaponProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
