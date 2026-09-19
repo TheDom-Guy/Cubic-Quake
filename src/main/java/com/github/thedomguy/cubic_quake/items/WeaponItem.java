@@ -1,20 +1,14 @@
 package com.github.thedomguy.cubic_quake.items;
 
-import com.github.thedomguy.cubic_quake.CubicQuake;
 import com.github.thedomguy.cubic_quake.entities.WeaponProjectile;
-import com.github.thedomguy.cubic_quake.items.client.NailgunRenderer;
 import com.github.thedomguy.cubic_quake.items.weapons.NailgunItem;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.NameTagItem;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -90,6 +84,16 @@ public class WeaponItem extends Item implements GeoItem {
                         user.getOffHandStack().decrement(ammoConsumption);
 
                         fireLogic(serverWorld, user, stack);
+                    } else {
+                        for(int i = 0; i < user.getInventory().size(); ++i) {
+                            ItemStack itemStack = user.getInventory().getStack(i);
+                            if (itemStack.getItem() == ammo) {
+                                itemStack.decrement(ammoConsumption);
+
+                                fireLogic(serverWorld, user, stack);
+                                break;
+                            }
+                        }
                     }
                 }
             } else {
