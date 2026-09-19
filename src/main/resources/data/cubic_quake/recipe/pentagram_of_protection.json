@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "minecraft:netherrack"
+    },
+    "G": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "pattern": [
+    "DGD",
+    "GNG",
+    "DGD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cubic_quake:pentagram_of_protection"
+  }
+}

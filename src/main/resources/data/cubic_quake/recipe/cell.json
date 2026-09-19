@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "CRC",
+    "CRC",
+    "CRC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cubic_quake:cell"
+  }
+}
