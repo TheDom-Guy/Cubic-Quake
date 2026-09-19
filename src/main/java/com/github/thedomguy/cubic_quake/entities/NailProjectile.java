@@ -15,7 +15,6 @@ import net.minecraft.world.World;
 public class NailProjectile extends WeaponProjectile{
     public NailProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
-        speed = 3;
     }
 
     public NailProjectile(World world, PlayerEntity user, float damage) {

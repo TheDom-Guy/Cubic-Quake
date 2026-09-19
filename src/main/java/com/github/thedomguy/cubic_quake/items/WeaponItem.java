@@ -31,12 +31,12 @@ import java.util.function.Consumer;
 
 public class WeaponItem extends Item implements GeoItem {
 
-    private final int damage;
+    private final float damage;
     private final Item ammo;
     private final int firerate;
-    private final EntityType projectile;
+    private final WeaponProjectile.Factory<? extends WeaponProjectile> projectile;
     private final int ammoConsumption;
-    private final GeoItemRenderer<WeaponItem> renderer;
+    private final GeoItemRenderer<? extends WeaponItem> renderer;
 
     private int fireDelay = 0;
     private boolean firing = false;
@@ -105,10 +105,13 @@ public class WeaponItem extends Item implements GeoItem {
 
     private void fireLogic(ServerWorld serverWorld, PlayerEntity user, ItemStack stack) {
         fireDelay = firerate;
-        if (projectile.create(serverWorld) instanceof WeaponProjectile p) {
-         //   p.setUp(damage, user);
+       /* if (projectile.create(serverWorld) instanceof WeaponProjectile) {
 
             serverWorld.spawnEntity(new NailProjectile(serverWorld, user, damage));
+        }*/
+
+        if (projectile.create(serverWorld, user, damage) != null) {
+            serverWorld.spawnEntity(projectile.create(serverWorld, user, damage));
         }
         if (this instanceof NailgunItem) {
             nailgunAnim(serverWorld, user, stack);

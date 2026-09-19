@@ -37,20 +37,6 @@ public class WeaponProjectile extends ProjectileEntity {
         setPosition(user.getPos().add(0, 1, 0));
     }
 
- /*   public void setUp(float damage, PlayerEntity user) {
-        dmg = damage;
-        setOwner(user);
-
-        ds = new DamageSource(this.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE), getOwner());
-
-        float f = -MathHelper.sin(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
-        float g = -MathHelper.sin(user.getPitch() * ((float)Math.PI / 180F));
-        float h = MathHelper.cos(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
-        this.setVelocity(f, g, h, speed, 0);
-
-        setPosition(user.getPos().add(0, 1, 0));
-    }*/
-
 
 
 
@@ -72,5 +58,10 @@ public class WeaponProjectile extends ProjectileEntity {
         double f = packet.getVelocityZ();
 
         this.setVelocity(d, e, f);
+    }
+
+
+    public interface Factory<T extends WeaponProjectile> {
+        T create(World world, PlayerEntity user, float damage);
     }
 }
