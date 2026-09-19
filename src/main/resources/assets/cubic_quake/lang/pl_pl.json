@@ -17,5 +17,10 @@
   "item.cubic_quake.ring_of_shadows": "Pierścień Cieni",
   "item.cubic_quake.pentagram_of_protection": "Pentagram Ochrony",
 
+  "block.cubic_quake.box_of_shells": "Pudełko Amunicji Śrutowej",
+  "block.cubic_quake.box_of_nails": "Pudełko Gwoździ",
+  "block.cubic_quake.box_of_cells": "Pudełko Baterii",
+  "block.cubic_quake.box_of_rockets": "Pudełko Rakiet",
+
   "itemgroup.cubic_quake.items": "Kańciasty Quake"
 }

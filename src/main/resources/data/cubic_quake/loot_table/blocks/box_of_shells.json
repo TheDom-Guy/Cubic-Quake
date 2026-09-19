@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cubic_quake:box_of_shells"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "cubic_quake:blocks/box_of_shells"
+}

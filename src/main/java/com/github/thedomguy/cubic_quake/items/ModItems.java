@@ -1,6 +1,7 @@
 package com.github.thedomguy.cubic_quake.items;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
+import com.github.thedomguy.cubic_quake.blocks.ModBlocks;
 import com.github.thedomguy.cubic_quake.items.weapons.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.component.type.AttributeModifierSlot;
@@ -70,6 +71,10 @@ public class ModItems {
                         entries.add(NAIL);
                         entries.add(CELL);
                         entries.add(ROCKET);
+                        entries.add(ModBlocks.BOX_OF_SHELLS);
+                        entries.add(ModBlocks.BOX_OF_NAILS);
+                        entries.add(ModBlocks.BOX_OF_CELLS);
+                        entries.add(ModBlocks.BOX_OF_ROCKETS);
                         entries.add(QUAD_DAMAGE);
                         entries.add(RING_OF_SHADOWS);
                         entries.add(PENTAGRAM_OF_PROTECTION);

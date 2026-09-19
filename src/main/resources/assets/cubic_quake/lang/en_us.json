@@ -17,6 +17,11 @@
   "item.cubic_quake.ring_of_shadows": "Ring of Shadows",
   "item.cubic_quake.pentagram_of_protection": "Pentagram of Protection",
 
+  "block.cubic_quake.box_of_shells": "Box of Shells",
+  "block.cubic_quake.box_of_nails": "Box of Nails",
+  "block.cubic_quake.box_of_cells": "Box of Cells",
+  "block.cubic_quake.box_of_rockets": "Box of Rockets",
+
   "itemgroup.cubic_quake.items": "Cubic Quake",
 
   "advancements.adventure.get_poor_mace.title": "Just Couldn't Wait",

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "cubic_quake:block/box_of_nails_top",
+    "side": "cubic_quake:block/box_of_nails",
+    "bottom": "cubic_quake:block/box_of_nails_bottom"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cubic_quake:block/box_of_cells"
+    }
+  }
+}

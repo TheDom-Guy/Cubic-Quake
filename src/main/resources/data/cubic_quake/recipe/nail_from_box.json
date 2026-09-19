@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "cubic_quake:box_of_nails"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cubic_quake:nail"
+  }
+}
