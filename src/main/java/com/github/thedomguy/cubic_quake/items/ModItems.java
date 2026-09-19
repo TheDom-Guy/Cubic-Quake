@@ -37,9 +37,8 @@ public class ModItems {
                     AttributeModifierSlot.MAINHAND
             )
             .build())));
-   // public static final Item AXE = registerItem("axe", new WeaponItem(new Item.Settings(), Weapons.AXE));
     public static final Item SHOTGUN = registerItem("shotgun", new ShotgunItem(new Item.Settings(), Weapons.SHOTGUN));
-    public static final Item DOUBLE_BARRElLED_SHOTGUN = registerItem("double_barrelled_shotgun", new DoubleBarrelledShotgunItem(new Item.Settings(), Weapons.DOUBLE_BARRElLED_SHOTGUN));
+    public static final Item DOUBLE_BARRELLED_SHOTGUN = registerItem("double_barrelled_shotgun", new DoubleBarrelledShotgunItem(new Item.Settings(), Weapons.DOUBLE_BARRELLED_SHOTGUN));
     public static final Item NAILGUN = registerItem("nailgun", new NailgunItem(new Item.Settings(), Weapons.NAILGUN));
     public static final Item SUPER_NAILGUN = registerItem("super_nailgun", new SuperNailgunItem(new Item.Settings(), Weapons.SUPER_NAILGUN));
     public static final Item THUNDERBOLT = registerItem("thunderbolt", new ThunderboltItem(new Item.Settings(), Weapons.THUNDERBOLT));
@@ -61,7 +60,7 @@ public class ModItems {
 
                         entries.add(AXE);
                         entries.add(SHOTGUN);
-                        entries.add(DOUBLE_BARRElLED_SHOTGUN);
+                        entries.add(DOUBLE_BARRELLED_SHOTGUN);
                         entries.add(NAILGUN);
                         entries.add(SUPER_NAILGUN);
                         entries.add(THUNDERBOLT);
