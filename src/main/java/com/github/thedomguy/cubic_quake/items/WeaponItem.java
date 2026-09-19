@@ -81,14 +81,14 @@ public class WeaponItem extends Item implements GeoItem {
                 if (user.isCreative()) {
                     fireLogic(serverWorld, user, stack);
                 } else {
-                    if (user.getOffHandStack().getItem() == ammo) {
+                    if (user.getOffHandStack().isOf(ammo) && user.getOffHandStack().getCount() >= ammoConsumption) {
                         user.getOffHandStack().decrement(ammoConsumption);
 
                         fireLogic(serverWorld, user, stack);
                     } else {
                         for(int i = 0; i < user.getInventory().size(); ++i) {
                             ItemStack itemStack = user.getInventory().getStack(i);
-                            if (itemStack.getItem() == ammo) {
+                            if (itemStack.isOf(ammo) && itemStack.getCount() >= ammoConsumption) {
                                 itemStack.decrement(ammoConsumption);
 
                                 fireLogic(serverWorld, user, stack);
@@ -105,11 +105,6 @@ public class WeaponItem extends Item implements GeoItem {
 
     private void fireLogic(ServerWorld serverWorld, PlayerEntity user, ItemStack stack) {
         fireDelay = firerate;
-       /* if (projectile.create(serverWorld) instanceof WeaponProjectile) {
-
-            serverWorld.spawnEntity(new NailProjectile(serverWorld, user, damage));
-        }*/
-
         if (projectile.create(serverWorld, user, damage) != null) {
             serverWorld.spawnEntity(projectile.create(serverWorld, user, damage));
         }
