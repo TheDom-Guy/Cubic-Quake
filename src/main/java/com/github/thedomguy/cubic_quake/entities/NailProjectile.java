@@ -1,11 +1,9 @@
 package com.github.thedomguy.cubic_quake.entities;
 
-import com.github.thedomguy.cubic_quake.CubicQuake;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
@@ -17,7 +15,12 @@ import net.minecraft.world.World;
 public class NailProjectile extends WeaponProjectile{
     public NailProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
         super(entityType, world);
-        speed = 2;
+        speed = 3;
+    }
+
+    public NailProjectile(World world, PlayerEntity user, float damage) {
+        super(ModEntities.NAIL_PROJECTILE, world, user, damage);
+        speed = 3;
     }
 
     @Override

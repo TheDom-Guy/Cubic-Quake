@@ -11,7 +11,9 @@ public class ModEntities {
    public static final EntityType<NailProjectile> NAIL_PROJECTILE = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(CubicQuake.MOD_ID, "nail_projectile"),
-            EntityType.Builder.create(NailProjectile::new, SpawnGroup.MISC)
+            EntityType.Builder.create(
+                            (EntityType.EntityFactory<NailProjectile>) NailProjectile::new,
+                            SpawnGroup.MISC)
                     .dimensions(0.3f, 0.3f)
                     .build()
     );
