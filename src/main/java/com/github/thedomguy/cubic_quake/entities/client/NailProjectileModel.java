@@ -34,7 +34,7 @@ public class NailProjectileModel<T extends Entity> extends SinglePartEntityModel
                         .uv(0, 4)
                         .cuboid(-2, 0, -4, 4, 4, 0)
                 , ModelTransform.rotation(0,(float) Math.PI,0));
-        return TexturedModelData.of(modelData, 32, 16);
+        return TexturedModelData.of(modelData, 16, 16);
     }
 
     @Override

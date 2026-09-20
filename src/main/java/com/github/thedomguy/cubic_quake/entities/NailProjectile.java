@@ -19,7 +19,11 @@ public class NailProjectile extends WeaponProjectile{
 
     public NailProjectile(World world, PlayerEntity user, float damage) {
         super(ModEntities.NAIL_PROJECTILE, world, user, damage);
-        speed = 3;
+    }
+
+    @Override
+    protected float getSpeed() {
+        return 3;
     }
 
     @Override

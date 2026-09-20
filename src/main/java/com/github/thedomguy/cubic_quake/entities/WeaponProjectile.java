@@ -14,7 +14,6 @@ public class WeaponProjectile extends ProjectileEntity {
 
     public float dmg = 0;
     protected int lifespan = 100;
-    protected float speed = 1;
     public DamageSource ds = new DamageSource(this.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE));
 
     public WeaponProjectile(EntityType<? extends ProjectileEntity> entityType, World world) {
@@ -32,9 +31,13 @@ public class WeaponProjectile extends ProjectileEntity {
         float f = -MathHelper.sin(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
         float g = -MathHelper.sin(user.getPitch() * ((float)Math.PI / 180F));
         float h = MathHelper.cos(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
-        this.setVelocity(f, g, h, speed, 0);
+        this.setVelocity(f, g, h, getSpeed(), 0);
 
         setPosition(user.getPos().add(0, 1, 0));
+    }
+
+    protected float getSpeed() {
+        return 1;
     }
 
 
