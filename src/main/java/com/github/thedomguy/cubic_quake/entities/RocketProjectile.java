@@ -83,11 +83,11 @@ public class RocketProjectile extends WeaponProjectile{
                 this.getX(),
                 this.getY(),
                 this.getZ(),
-                2F,
+                1F,
                 false,
                 World.ExplosionSourceType.TRIGGER,
-                ParticleTypes.GUST_EMITTER_SMALL,
-                ParticleTypes.GUST_EMITTER_LARGE,
-                SoundEvents.ENTITY_WIND_CHARGE_WIND_BURST);
+                ParticleTypes.EXPLOSION,
+                ParticleTypes.EXPLOSION_EMITTER,
+                SoundEvents.ENTITY_GENERIC_EXPLODE);
     }
 }

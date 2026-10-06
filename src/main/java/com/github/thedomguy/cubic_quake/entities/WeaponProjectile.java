@@ -33,7 +33,7 @@ public class WeaponProjectile extends ProjectileEntity {
         float h = MathHelper.cos(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
         this.setVelocity(f, g, h, getSpeed(), 0);
 
-        setPosition(user.getPos().add(0, 1, 0));
+        setPosition(user.getPos().add(0, 1.4, 0));
     }
 
     protected float getSpeed() {
