@@ -24,16 +24,8 @@ public class GrenadeProjectileModel<T extends Entity> extends SinglePartEntityMo
         ModelPartData modelPartData = modelData.getRoot();
         modelPartData.addChild("body", ModelPartBuilder.create()
                         .uv(0, 0)
-                        .cuboid(-1.5f, 0, -6, 3, 3, 12)
+                        .cuboid(-1.5f, 0, -3.5f, 3, 3, 7)
                 , ModelTransform.rotation(0,(float) Math.PI,0));
-        modelPartData.addChild("finsv", ModelPartBuilder.create()
-                        .uv(0, -4)
-                        .cuboid(0, -2f, -6, 0, 7, 4)
-                , ModelTransform.NONE);
-        modelPartData.addChild("finsh", ModelPartBuilder.create()
-                        .uv(0, -4)
-                        .cuboid(1.5f, -3.5f, -6, 0, 7, 4)
-                , ModelTransform.rotation(0,0,(float) (Math.PI * 0.5)));
         return TexturedModelData.of(modelData, 32, 16);
     }
 

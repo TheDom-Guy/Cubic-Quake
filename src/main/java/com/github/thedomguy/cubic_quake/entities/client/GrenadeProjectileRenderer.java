@@ -17,7 +17,7 @@ import net.minecraft.util.math.RotationAxis;
 
 @Environment(EnvType.CLIENT)
 public class GrenadeProjectileRenderer extends EntityRenderer<GrenadeProjectile> {
-    private static final Identifier TEXTURE = Identifier.of(CubicQuake.MOD_ID, "textures/entity/rocket_projectile.png");
+    private static final Identifier TEXTURE = Identifier.of(CubicQuake.MOD_ID, "textures/entity/grenade_projectile.png");
     private final GrenadeProjectileModel<GrenadeProjectile> model;
 
     public GrenadeProjectileRenderer(EntityRendererFactory.Context context) {
