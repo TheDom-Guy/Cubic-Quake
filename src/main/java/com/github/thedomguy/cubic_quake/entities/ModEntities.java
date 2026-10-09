@@ -16,9 +16,9 @@ public class ModEntities {
                             SpawnGroup.MISC)
                     .dimensions(0.3f, 0.3f)
                     .build()
-    );
+   );
 
-    public static final EntityType<RocketProjectile> ROCKET_PROJECTILE = Registry.register(
+   public static final EntityType<RocketProjectile> ROCKET_PROJECTILE = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(CubicQuake.MOD_ID, "rocket_projectile"),
             EntityType.Builder.create(
@@ -26,7 +26,18 @@ public class ModEntities {
                             SpawnGroup.MISC)
                     .dimensions(0.3f, 0.3f)
                     .build()
-    );
+   );
+
+   public static final EntityType<GrenadeProjectile> GRENADE_PROJECTILE = Registry.register(
+           Registries.ENTITY_TYPE,
+           Identifier.of(CubicQuake.MOD_ID, "grenade_projectile"),
+           EntityType.Builder.create(
+                            (EntityType.EntityFactory<GrenadeProjectile>) GrenadeProjectile::new,
+                            SpawnGroup.MISC)
+                    .dimensions(0.3f, 0.3f)
+                    .build()
+   );
+
 
    public static void registerModEntities() {
    }
