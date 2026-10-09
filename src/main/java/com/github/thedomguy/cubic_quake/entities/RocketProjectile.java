@@ -41,7 +41,7 @@ public class RocketProjectile extends WeaponProjectile{
         super.tick();
         --lifespan;
         if (lifespan <= 0) {
-            this.discard();
+            explode();
         }
 
         Vec3d vec3d = this.getVelocity();
@@ -51,12 +51,9 @@ public class RocketProjectile extends WeaponProjectile{
         double e = this.getY() + vec3d.y;
         double f = this.getZ() + vec3d.z;
         this.updateRotation();
-        if (this.getWorld().getStatesInBox(this.getBoundingBox()).noneMatch(AbstractBlock.AbstractBlockState::isAir)) {
-            this.discard();
-        } else {
-            this.setVelocity(vec3d.multiply(0.99F));
-            this.setPosition(d, e, f);
-        }
+
+        this.setVelocity(vec3d.multiply(0.99F));
+        this.setPosition(d, e, f);
     }
 
     @Override
@@ -64,9 +61,6 @@ public class RocketProjectile extends WeaponProjectile{
         Entity hit = entityHitResult.getEntity();
         if (hit instanceof LivingEntity && !(hit == getOwner())) {
             explode();
-
-
-            this.discard();
         }
     }
 
@@ -83,11 +77,12 @@ public class RocketProjectile extends WeaponProjectile{
                 this.getX(),
                 this.getY(),
                 this.getZ(),
-                1F,
+                1.5F,
                 false,
                 World.ExplosionSourceType.TRIGGER,
                 ParticleTypes.EXPLOSION,
                 ParticleTypes.EXPLOSION_EMITTER,
                 SoundEvents.ENTITY_GENERIC_EXPLODE);
+        this.discard();
     }
 }
