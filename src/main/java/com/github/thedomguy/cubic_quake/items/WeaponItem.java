@@ -87,6 +87,11 @@ public class WeaponItem extends Item implements GeoItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (world instanceof ServerWorld serverWorld && entity instanceof PlayerEntity user) {
+            if (user.isDead() || !selected) {
+                user.stopUsingItem();
+            }
+
+
             if (fireDelay <= 0 && firing) {
                 if (user.isCreative()) {
                     fireLogic(serverWorld, user, stack);
