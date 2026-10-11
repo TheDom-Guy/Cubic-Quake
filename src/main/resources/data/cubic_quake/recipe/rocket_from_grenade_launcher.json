@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "equipment",
+  "group": "rocket",
   "ingredients": [
     {
       "item": "cubic_quake:grenade_launcher"

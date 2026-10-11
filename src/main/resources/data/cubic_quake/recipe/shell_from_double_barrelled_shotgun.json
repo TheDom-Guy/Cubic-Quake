@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "equipment",
+  "group": "shell",
   "ingredients": [
     {
       "item": "cubic_quake:double_barrelled_shotgun"
