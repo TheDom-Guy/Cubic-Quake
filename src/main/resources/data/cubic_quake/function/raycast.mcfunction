@@ -1,1 +1,0 @@
-execute positioned ~ ~1.5 ~ positioned ^ ^ ^.5 run function cubic_quake:laser

@@ -12,8 +12,8 @@ public enum Weapons {
     DEFAULT(0, Items.ARROW, 20, null, 1, new ShotgunRenderer()),
     AXE(1, null, 20, null, 0, new ShotgunRenderer()),
 
-    SHOTGUN(0.5f, ModItems.SHELL, 8, ShotBlast::new, 1, new ShotgunRenderer()),
-    DOUBLE_BARRELLED_SHOTGUN(1, ModItems.SHELL, 15, ShotBlast::new, 2, new DoubleBarrelledShotgunRenderer()),
+    SHOTGUN(1, ModItems.SHELL, 8, ShotBlast::new, 1, new ShotgunRenderer()),
+    DOUBLE_BARRELLED_SHOTGUN(2, ModItems.SHELL, 15, SuperShotBlast::new, 2, new DoubleBarrelledShotgunRenderer()),
     NAILGUN(2, ModItems.NAIL, 2, NailProjectile::new, 1, new NailgunRenderer()),
     SUPER_NAILGUN(4, ModItems.NAIL, 2, NailProjectile::new, 2, new SuperNailgunRenderer()),
     THUNDERBOLT(4, ModItems.CELL, 3, NailProjectile::new, 1, new ThunderboltRenderer()),

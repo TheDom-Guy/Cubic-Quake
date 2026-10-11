@@ -21,9 +21,14 @@ public class ShotBlast extends WeaponProjectile{
         super(ModEntities.SHOT_BLAST, world, user, damage);
         lifespan = 20;
 
-        if (!world.isClient && world instanceof ServerWorld serverWorld) {
-            world.spawnEntity(new ShotPelletProjectile(serverWorld, user, damage));
+        for (int i = 0; i < getPelletsAmount(); i++) {
+            world.spawnEntity(new ShotPelletProjectile(world, user, damage));
         }
+
+    }
+
+    protected int getPelletsAmount() {
+        return 4;
     }
 
     @Override
