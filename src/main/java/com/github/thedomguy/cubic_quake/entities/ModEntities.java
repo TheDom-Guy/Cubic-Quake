@@ -38,11 +38,21 @@ public class ModEntities {
                     .build()
    );
 
-   public static final EntityType<ShotBlastProjectile> SHOT_BLAST_PROJECTILE = Registry.register(
+   public static final EntityType<ShotBlast> SHOT_BLAST = Registry.register(
+           Registries.ENTITY_TYPE,
+           Identifier.of(CubicQuake.MOD_ID, "shot_blast"),
+           EntityType.Builder.create(
+                           (EntityType.EntityFactory<ShotBlast>) ShotBlast::new,
+                           SpawnGroup.MISC)
+                   .dimensions(0.3f, 0.3f)
+                   .build()
+   );
+
+   public static final EntityType<ShotPelletProjectile> SHOT_PELLET_PROJECTILE = Registry.register(
            Registries.ENTITY_TYPE,
            Identifier.of(CubicQuake.MOD_ID, "shot_blast_projectile"),
            EntityType.Builder.create(
-                           (EntityType.EntityFactory<ShotBlastProjectile>) ShotBlastProjectile::new,
+                           (EntityType.EntityFactory<ShotPelletProjectile>) ShotPelletProjectile::new,
                            SpawnGroup.MISC)
                    .dimensions(0.3f, 0.3f)
                    .build()

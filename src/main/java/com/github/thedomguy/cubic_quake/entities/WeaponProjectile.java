@@ -31,13 +31,17 @@ public class WeaponProjectile extends ProjectileEntity {
         float f = -MathHelper.sin(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
         float g = -MathHelper.sin(user.getPitch() * ((float)Math.PI / 180F));
         float h = MathHelper.cos(user.getYaw() * ((float)Math.PI / 180F)) * MathHelper.cos(user.getPitch() * ((float)Math.PI / 180F));
-        this.setVelocity(f, g, h, getSpeed(), 0);
+        this.setVelocity(f, g, h, getSpeed(), getRandomness());
 
         setPosition(user.getPos().add(0, 1.4, 0));
     }
 
     protected float getSpeed() {
         return 1;
+    }
+
+    protected float getRandomness() {
+        return 0;
     }
 
 

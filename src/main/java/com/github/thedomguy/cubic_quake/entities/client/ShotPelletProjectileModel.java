@@ -7,10 +7,10 @@ import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.entity.Entity;
 
 @Environment(EnvType.CLIENT)
-public class ShotBlastProjectileModel<T extends Entity> extends SinglePartEntityModel<T> {
+public class ShotPelletProjectileModel<T extends Entity> extends SinglePartEntityModel<T> {
     private final ModelPart rt;
 
-    protected ShotBlastProjectileModel(ModelPart root) {
+    protected ShotPelletProjectileModel(ModelPart root) {
         rt = root;
     }
 
@@ -25,8 +25,8 @@ public class ShotBlastProjectileModel<T extends Entity> extends SinglePartEntity
         modelPartData.addChild("body", ModelPartBuilder.create()
                         .uv(0, 0)
                         .cuboid(0, 0, 0, 0, 0, 0)
-                , ModelTransform.rotation(0,(float) Math.PI,0));
-        return TexturedModelData.of(modelData, 32, 16);
+                , ModelTransform.NONE);
+        return TexturedModelData.of(modelData, 16, 16);
     }
 
     @Override

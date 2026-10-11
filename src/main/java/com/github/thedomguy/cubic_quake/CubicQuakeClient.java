@@ -12,7 +12,8 @@ public class CubicQuakeClient implements ClientModInitializer {
     public static final EntityModelLayer NAIL_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "nail_projectile"), "main");
     public static final EntityModelLayer ROCKET_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "rocket_projectile"), "main");
     public static final EntityModelLayer GRENADE_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "grenade_projectile"), "main");
-    public static final EntityModelLayer SHOT_BLAST_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "shot_blast_projectile"), "main");
+    public static final EntityModelLayer SHOT_BLAST_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "shot_blast"), "main");
+    public static final EntityModelLayer SHOT_PELLET_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "shot_pellet_projectile"), "main");
 
 
     @Override
@@ -27,8 +28,11 @@ public class CubicQuakeClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.GRENADE_PROJECTILE, GrenadeProjectileRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(GRENADE_PROJECTILE_LAYER, GrenadeProjectileModel::getTexturedModelData);
 
-        EntityRendererRegistry.register(ModEntities.SHOT_BLAST_PROJECTILE, ShotBlastProjectileRenderer::new);
-        EntityModelLayerRegistry.registerModelLayer(SHOT_BLAST_PROJECTILE_LAYER, ShotBlastProjectileModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.SHOT_BLAST, ShotBlastRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(SHOT_BLAST_LAYER, ShotBlastModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.SHOT_PELLET_PROJECTILE, ShotPelletProjectileRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(SHOT_PELLET_PROJECTILE_LAYER, ShotPelletProjectileModel::getTexturedModelData);
 
     }
 }
