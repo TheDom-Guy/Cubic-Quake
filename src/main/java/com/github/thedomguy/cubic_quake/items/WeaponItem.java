@@ -87,8 +87,11 @@ public class WeaponItem extends Item implements GeoItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (world instanceof ServerWorld serverWorld && entity instanceof PlayerEntity user) {
+
+            //causes new bug where only the first instance of a quake weapon in hotbar can fire
+            //but also only works with multiple weapons in the inventory
             if (user.isDead() || !selected) {
-                user.stopUsingItem();
+                firing = false;
             }
 
 
