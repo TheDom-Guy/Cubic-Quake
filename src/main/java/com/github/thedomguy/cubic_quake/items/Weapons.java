@@ -1,9 +1,6 @@
 package com.github.thedomguy.cubic_quake.items;
 
-import com.github.thedomguy.cubic_quake.entities.GrenadeProjectile;
-import com.github.thedomguy.cubic_quake.entities.NailProjectile;
-import com.github.thedomguy.cubic_quake.entities.RocketProjectile;
-import com.github.thedomguy.cubic_quake.entities.WeaponProjectile;
+import com.github.thedomguy.cubic_quake.entities.*;
 import com.github.thedomguy.cubic_quake.items.client.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -15,8 +12,8 @@ public enum Weapons {
     DEFAULT(0, Items.ARROW, 20, null, 1, new ShotgunRenderer()),
     AXE(1, null, 20, null, 0, new ShotgunRenderer()),
 
-    SHOTGUN(1, ModItems.SHELL, 8, NailProjectile::new, 1, new ShotgunRenderer()),
-    DOUBLE_BARRELLED_SHOTGUN(1, ModItems.SHELL, 15, NailProjectile::new, 2, new DoubleBarrelledShotgunRenderer()),
+    SHOTGUN(1, ModItems.SHELL, 8, ShotBlastProjectile::new, 1, new ShotgunRenderer()),
+    DOUBLE_BARRELLED_SHOTGUN(1, ModItems.SHELL, 15, ShotBlastProjectile::new, 2, new DoubleBarrelledShotgunRenderer()),
     NAILGUN(2, ModItems.NAIL, 2, NailProjectile::new, 1, new NailgunRenderer()),
     SUPER_NAILGUN(4, ModItems.NAIL, 2, NailProjectile::new, 2, new SuperNailgunRenderer()),
     THUNDERBOLT(4, ModItems.CELL, 3, NailProjectile::new, 1, new ThunderboltRenderer()),
