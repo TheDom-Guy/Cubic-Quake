@@ -3,6 +3,7 @@ package com.github.thedomguy.cubic_quake.entities;
 import com.github.thedomguy.cubic_quake.CubicQuake;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
@@ -20,19 +21,9 @@ public class ShotBlast extends WeaponProjectile{
         super(ModEntities.SHOT_BLAST, world, user, damage);
         lifespan = 20;
 
-
-      /*  EntityHitResult hitResult = ProjectileUtil.raycast(user, user.getEyePos(), user.getEyePos().add(10, 0, 0), new Box(user.getBlockPos()).stretch(2, 2, 2), entity -> entity instanceof LivingEntity, 10);
-         if (hitResult != null) {
-             CubicQuake.print(hitResult.getEntity().toString());
-             hitResult.getEntity().damage(ds, 100);
-         }*/
-
         if (!world.isClient && world instanceof ServerWorld serverWorld) {
             world.spawnEntity(new ShotPelletProjectile(serverWorld, user, damage));
         }
-
-
-
     }
 
     @Override

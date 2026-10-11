@@ -122,16 +122,12 @@ public class WeaponItem extends Item implements GeoItem {
 
     private void fireLogic(ServerWorld serverWorld, PlayerEntity user, ItemStack stack) {
         fireDelay = firerate;
-        if (projectile.create(serverWorld, user, damage) != null) {
-            serverWorld.spawnEntity(projectile.create(serverWorld, user, damage));
-        }
 
-       /* if (this instanceof ShotgunItem) {
-            EntityHitResult hitResult = ProjectileUtil.raycast(user, user.getEyePos(), user.getEyePos().add(10, 0, 0), new Box(user.getBlockPos()), entity -> entity instanceof ZombieEntity, 10);
-            if (hitResult != null) {
-                hitResult.getEntity().damage(new DamageSource(serverWorld.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE), user), 10);
-            }
-        }*/
+        WeaponProjectile wp = projectile.create(serverWorld, user, damage);
+
+        if (wp != null) {
+            serverWorld.spawnEntity(wp);
+        }
 
         if (this instanceof NailgunItem) {
             nailgunAnim(serverWorld, user, stack);
