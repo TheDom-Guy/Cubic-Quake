@@ -7,6 +7,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Vec3d;
@@ -44,6 +45,11 @@ public class NailProjectile extends WeaponProjectile{
 
         this.setVelocity(vec3d.multiply(0.99F));
         this.setPosition(d, e, f);
+    }
+
+    @Override
+    protected void onBlockHit(BlockHitResult blockHitResult) {
+        discard();
     }
 
     @Override
