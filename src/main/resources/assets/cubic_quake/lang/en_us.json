@@ -24,6 +24,10 @@
 
   "itemgroup.cubic_quake.items": "Cubic Quake",
 
+  "death.attack.cubic_quake": "%1$s got fragged",
+
+
+
   "advancements.adventure.get_poor_mace.title": "Just Couldn't Wait",
   "advancements.adventure.get_poor_mace.description": "Obtain the Poor Man's Mace"
 }
