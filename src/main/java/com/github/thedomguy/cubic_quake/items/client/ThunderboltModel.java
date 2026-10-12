@@ -19,6 +19,6 @@ public class ThunderboltModel extends GeoModel<ThunderboltItem> {
 
     @Override
     public Identifier getAnimationResource(ThunderboltItem animatable) {
-        return null;
+        return Identifier.of(CubicQuake.MOD_ID, "animations/thunderbolt.animation.json");
     }
 }
