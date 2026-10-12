@@ -21,7 +21,7 @@ public class ModItems {
     //Ammo
     public static final Item SHELL = registerItem("shell", new Item(new Item.Settings()));
     public static final Item NAIL = registerItem("nail", new Item(new Item.Settings()));
-    public static final Item CELL = registerItem("cell", new Item(new Item.Settings()));
+    public static final Item CELL = registerItem("cell", new Item(new Item.Settings().maxCount(16)));
     public static final Item ROCKET = registerItem("rocket", new Item(new Item.Settings()));
 
     //Weapons

@@ -38,7 +38,7 @@ public class LightningProjectile extends WeaponProjectile{
         }
 
         if (!getWorld().isClient) {
-            ((ServerWorld)getWorld()).spawnParticles(ParticleTypes.CRIT, this.getX(), this.getY(), this.getZ(), 1, 0,0,0,0);
+            ((ServerWorld)getWorld()).spawnParticles(ParticleTypes.CRIT, this.getX(), this.getY(), this.getZ(), 3, 0,0,0,0);
         }
 
         Vec3d vec3d = this.getVelocity();
