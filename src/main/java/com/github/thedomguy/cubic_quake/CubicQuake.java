@@ -2,13 +2,19 @@ package com.github.thedomguy.cubic_quake;
 
 import com.github.thedomguy.cubic_quake.blocks.ModBlocks;
 import com.github.thedomguy.cubic_quake.entities.ModEntities;
+import com.github.thedomguy.cubic_quake.entities.effects.QuadDamageEffect;
 import com.github.thedomguy.cubic_quake.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageType;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -19,6 +25,9 @@ public class CubicQuake implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final RegistryKey<DamageType> CUBIC_QUAKE_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(MOD_ID, "cubic_quake_damage"));
+
+	public static final RegistryEntry<StatusEffect> QUAD_DAMAGE_EFFECT = Registry.registerReference(
+			Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "quad_damage"), new QuadDamageEffect());
 
 	@Override
 	public void onInitialize() {

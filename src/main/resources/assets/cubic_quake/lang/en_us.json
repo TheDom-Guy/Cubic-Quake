@@ -24,6 +24,8 @@
 
   "itemgroup.cubic_quake.items": "Cubic Quake",
 
+  "effect.cubic_quake.quad_damage": "Quad Damage",
+
   "death.attack.cubic_quake": "%1$s got fragged",
 
 

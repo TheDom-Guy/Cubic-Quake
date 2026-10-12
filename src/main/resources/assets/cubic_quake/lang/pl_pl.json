@@ -24,5 +24,7 @@
 
   "itemgroup.cubic_quake.items": "Kańciasty Quake",
 
+  "effect.cubic_quake.quad_damage": "Cztero-grzmot",
+
   "death.attack.cubic_quake": "%1$s został zfragowany"
 }
