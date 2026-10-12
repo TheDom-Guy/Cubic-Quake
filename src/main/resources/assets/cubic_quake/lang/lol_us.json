@@ -1,0 +1,35 @@
+{
+  "item.cubic_quake.shell": "boomstik ammo",
+  "item.cubic_quake.nail": "spyk",
+  "item.cubic_quake.cell": "Beteree",
+  "item.cubic_quake.rocket": "Rawkit",
+
+  "item.cubic_quake.axe": " Boring chopper",
+  "item.cubic_quake.shotgun": "da BoomStick",
+  "item.cubic_quake.double_barrelled_shotgun": "teh DUBLLE BOOMSTICK",
+  "item.cubic_quake.nailgun": "spik pewpewer",
+  "item.cubic_quake.super_nailgun": "SUPER spike pew pewer",
+  "item.cubic_quake.thunderbolt": "tundurbolt",
+  "item.cubic_quake.grenade_launcher": "Kabooom Lonchr",
+  "item.cubic_quake.rocket_launcher": "rawket Lawnchair",
+
+  "item.cubic_quake.quad_damage": "4 Hurter",
+  "item.cubic_quake.ring_of_shadows": "teh 1 ring!!!",
+  "item.cubic_quake.pentagram_of_protection": "eevil star of not dying",
+
+  "block.cubic_quake.box_of_shells": "Box of shootgun amo",
+  "block.cubic_quake.box_of_nails": "box of spikee thingz",
+  "block.cubic_quake.box_of_cells": "pakc of bettteries",
+  "block.cubic_quake.box_of_rockets": "Boks of Rokets",
+
+  "itemgroup.cubic_quake.items": "Squer Quake",
+
+  "effect.cubic_quake.quad_damage": "Hurt times Fuor",
+
+  "death.attack.cubic_quake": "%1$s got REKT!!1!!",
+
+
+
+  "advancements.adventure.get_poor_mace.title": "Just Couldn't Wait",
+  "advancements.adventure.get_poor_mace.description": "Obtain the Poor Man's Mace"
+}
