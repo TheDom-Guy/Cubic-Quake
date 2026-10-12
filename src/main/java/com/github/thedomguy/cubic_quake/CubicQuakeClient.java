@@ -14,6 +14,7 @@ public class CubicQuakeClient implements ClientModInitializer {
     public static final EntityModelLayer GRENADE_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "grenade_projectile"), "main");
     public static final EntityModelLayer SHOT_BLAST_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "shot_blast"), "main");
     public static final EntityModelLayer SHOT_PELLET_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "shot_pellet_projectile"), "main");
+    public static final EntityModelLayer LIGHTNING_PROJECTILE_LAYER = new EntityModelLayer(Identifier.of(CubicQuake.MOD_ID, "lightning_projectile"), "main");
 
 
     @Override
@@ -33,6 +34,9 @@ public class CubicQuakeClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.SHOT_PELLET_PROJECTILE, ShotPelletProjectileRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(SHOT_PELLET_PROJECTILE_LAYER, ShotPelletProjectileModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.LIGHTNING_PROJECTILE, LightningProjectileRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(LIGHTNING_PROJECTILE_LAYER, LightningProjectileModel::getTexturedModelData);
 
     }
 }

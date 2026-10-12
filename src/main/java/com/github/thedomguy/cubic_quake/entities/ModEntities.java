@@ -58,6 +58,16 @@ public class ModEntities {
                    .build()
    );
 
+   public static final EntityType<LightningProjectile> LIGHTNING_PROJECTILE = Registry.register(
+           Registries.ENTITY_TYPE,
+           Identifier.of(CubicQuake.MOD_ID, "lightning_projectile"),
+           EntityType.Builder.create(
+                           (EntityType.EntityFactory<LightningProjectile>) LightningProjectile::new,
+                           SpawnGroup.MISC)
+                   .dimensions(0.3f, 0.3f)
+                   .build()
+   );
+
 
    public static void registerModEntities() {
    }
