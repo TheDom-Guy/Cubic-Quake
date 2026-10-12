@@ -50,7 +50,7 @@ public class ModEntities {
 
    public static final EntityType<ShotPelletProjectile> SHOT_PELLET_PROJECTILE = Registry.register(
            Registries.ENTITY_TYPE,
-           Identifier.of(CubicQuake.MOD_ID, "shot_blast_projectile"),
+           Identifier.of(CubicQuake.MOD_ID, "shot_pellet_projectile"),
            EntityType.Builder.create(
                            (EntityType.EntityFactory<ShotPelletProjectile>) ShotPelletProjectile::new,
                            SpawnGroup.MISC)

@@ -19,7 +19,7 @@ public class ShotPelletProjectileRenderer extends EntityRenderer<ShotPelletProje
 
     public ShotPelletProjectileRenderer(EntityRendererFactory.Context context) {
         super(context);
-        this.model = new ShotPelletProjectileModel<>(context.getPart(CubicQuakeClient.SHOT_BLAST_LAYER));
+        this.model = new ShotPelletProjectileModel<>(context.getPart(CubicQuakeClient.SHOT_PELLET_PROJECTILE_LAYER));
     }
 
     @Override
