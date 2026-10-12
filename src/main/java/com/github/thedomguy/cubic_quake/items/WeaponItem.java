@@ -123,7 +123,8 @@ public class WeaponItem extends Item implements GeoItem {
     private void fireLogic(ServerWorld serverWorld, PlayerEntity user, ItemStack stack) {
         fireDelay = firerate;
 
-        WeaponProjectile wp = projectile.create(serverWorld, user, damage);
+        WeaponProjectile wp = projectile.create(serverWorld, user,
+                user.hasStatusEffect(CubicQuake.QUAD_DAMAGE_EFFECT) ? damage * 4 : damage);
 
         if (wp != null) {
             serverWorld.spawnEntity(wp);
