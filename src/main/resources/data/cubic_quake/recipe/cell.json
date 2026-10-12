@@ -4,10 +4,10 @@
   "group": "cell",
   "key": {
     "R": {
-      "item": "minecraft:redstone"
+      "item": "minecraft:redstone_block"
     },
     "C": {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:copper_block"
     }
   },
   "pattern": [
