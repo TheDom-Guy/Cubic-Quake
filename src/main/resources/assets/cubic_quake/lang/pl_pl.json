@@ -25,6 +25,7 @@
   "itemgroup.cubic_quake.items": "Kańciasty Quake",
 
   "effect.cubic_quake.quad_damage": "Cztero-grzmot",
+  "effect.cubic_quake.pentagram_protection": "Ochrona Pentagramu",
 
   "death.attack.cubic_quake": "%1$s został zfragowany"
 }

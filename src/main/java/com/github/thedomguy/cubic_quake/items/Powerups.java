@@ -11,7 +11,7 @@ public enum Powerups {
 
     QUAD_DAMAGE(CubicQuake.QUAD_DAMAGE_EFFECT, 300),
     RING_OF_SHADOWS(StatusEffects.INVISIBILITY, 400),
-    PENTAGRAM_OF_PROTECTION(StatusEffects.ABSORPTION, 400);
+    PENTAGRAM_OF_PROTECTION(CubicQuake.PENTAGRAM_PROTECTION_EFFECT, 400);
 
     private final RegistryEntry<StatusEffect> e;
     private final int d;
