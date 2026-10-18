@@ -119,6 +119,6 @@
     }
   },
   "textures": {
-    "particle": "cubic_quake:item/double_barelled_shotgun"
+    "particle": "cubic_quake:item/double_barrelled_shotgun"
   }
 }

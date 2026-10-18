@@ -1,6 +1,7 @@
 package com.github.thedomguy.cubic_quake.entities;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
+import com.github.thedomguy.cubic_quake.ModSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -11,6 +12,7 @@ import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
@@ -85,6 +87,8 @@ public class GrenadeProjectile extends WeaponProjectile{
         bounce = true;
         lifespan = Math.clamp(lifespan, 0 ,80) - 5;
         Direction side = blockHitResult.getSide();
+
+        getWorld().playSound(null, getBlockPos(), ModSounds.GRENADE_BOUNCE, SoundCategory.PLAYERS);
 
         setVelocity(getVelocity().multiply(0.70f));
         if ((getVelocity().x < 0.1 && getVelocity().x > -0.1)

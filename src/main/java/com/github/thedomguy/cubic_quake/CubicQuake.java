@@ -42,6 +42,7 @@ public class CubicQuake implements ModInitializer {
 		ModItems.registerModItems();
 		ModEntities.registerModEntities();
 		ModBlocks.registerModBlocks();
+		ModSounds.registerSounds();
 	}
 
 	public static Identifier id(String path) {

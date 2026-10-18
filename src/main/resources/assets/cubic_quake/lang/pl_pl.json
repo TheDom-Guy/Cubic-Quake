@@ -27,5 +27,14 @@
   "effect.cubic_quake.quad_damage": "Cztero-grzmot",
   "effect.cubic_quake.pentagram_protection": "Ochrona Pentagramu",
 
-  "death.attack.cubic_quake": "%1$s został zfragowany"
+  "death.attack.cubic_quake": "%1$s został zfragowany",
+
+  "sounds.cubic_quake.shotgun_fire": "Strzelba stzrela",
+  "sounds.cubic_quake.super_shotgun_fire": "Dwulufowa strzelba strzela",
+  "sounds.cubic_quake.nailgun_fire": "Gwoździarka strzela",
+  "sounds.cubic_quake.super_nailgun_fire": "Super gwoździarka strzela",
+  "sounds.cubic_quake.grenade_launcher_fire": "Granatnik strzela",
+  "sounds.cubic_quake.rocket_launcher_fire": "Wyrzutnia rakiet strzela",
+  "sounds.cubic_quake.thunderbolt_fire": "Piorun strzela",
+  "sounds.cubic_quake.grenade_bounce": "Granat odbija się"
 }

@@ -1,6 +1,7 @@
 package com.github.thedomguy.cubic_quake.items;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
+import com.github.thedomguy.cubic_quake.ModSounds;
 import com.github.thedomguy.cubic_quake.entities.NailProjectile;
 import com.github.thedomguy.cubic_quake.entities.WeaponProjectile;
 import com.github.thedomguy.cubic_quake.items.weapons.NailgunItem;
@@ -17,6 +18,8 @@ import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.EntityHitResult;
@@ -47,6 +50,7 @@ public class WeaponItem extends Item implements GeoItem {
     private final WeaponProjectile.Factory<? extends WeaponProjectile> projectile;
     private final int ammoConsumption;
     private final GeoItemRenderer<? extends WeaponItem> renderer;
+    private final SoundEvent fireSound;
 
     private int fireDelay = 0;
     private boolean firing = false;
@@ -64,6 +68,7 @@ public class WeaponItem extends Item implements GeoItem {
         projectile = weapon.PROJECTILE();
         ammoConsumption = weapon.AMMO_CONSUMPTION();
         renderer = weapon.RENDERER();
+        fireSound = weapon.FIRESOUND();
     }
 
     @Override
@@ -128,6 +133,7 @@ public class WeaponItem extends Item implements GeoItem {
 
         if (wp != null) {
             serverWorld.spawnEntity(wp);
+            serverWorld.playSoundFromEntity(null, user, fireSound, SoundCategory.PLAYERS, 0.6f, 1);
         }
 
         if (this instanceof NailgunItem) {

@@ -29,8 +29,12 @@
 
   "death.attack.cubic_quake": "%1$s got fragged",
 
-
-
-  "advancements.adventure.get_poor_mace.title": "Just Couldn't Wait",
-  "advancements.adventure.get_poor_mace.description": "Obtain the Poor Man's Mace"
+  "sounds.cubic_quake.shotgun_fire": "Shotgun fires",
+  "sounds.cubic_quake.super_shotgun_fire": "Double barrelled shotgun fires",
+  "sounds.cubic_quake.nailgun_fire": "Nailgun fires",
+  "sounds.cubic_quake.super_nailgun_fire": "Super nailgun fires",
+  "sounds.cubic_quake.grenade_launcher_fire": "Grenade launcher fires",
+  "sounds.cubic_quake.rocket_launcher_fire": "Rocket launcher fires",
+  "sounds.cubic_quake.thunderbolt_fire": "Thunderbolt fires",
+  "sounds.cubic_quake.grenade_bounce": "Grenade bounces"
 }

@@ -1,0 +1,50 @@
+{
+  "shotgun_fire": {
+    "subtitle": "sounds.cubic_quake.shotgun_fire",
+    "sounds": [
+      "cubic_quake:shotgun_fire"
+    ]
+  },
+  "super_shotgun_fire": {
+    "subtitle": "sounds.cubic_quake.super_shotgun_fire",
+    "sounds": [
+      "cubic_quake:super_shotgun_fire"
+    ]
+  },
+  "nailgun_fire": {
+    "subtitle": "sounds.cubic_quake.nailgun_fire",
+    "sounds": [
+      "cubic_quake:nailgun_fire"
+    ]
+  },
+  "super_nailgun_fire": {
+    "subtitle": "sounds.cubic_quake.super_nailgun_fire",
+    "sounds": [
+      "cubic_quake:super_nailgun_fire"
+    ]
+  },
+  "grenade_launcher_fire": {
+    "subtitle": "sounds.cubic_quake.grenade_launcher_fire",
+    "sounds": [
+      "cubic_quake:grenade_launcher_fire"
+    ]
+  },
+  "rocket_launcher_fire": {
+    "subtitle": "sounds.cubic_quake.rocket_launcher_fire",
+    "sounds": [
+      "cubic_quake:rocket_launcher_fire"
+    ]
+  },
+  "thunderbolt_fire": {
+    "subtitle": "sounds.cubic_quake.thunderbolt_fire",
+    "sounds": [
+      "cubic_quake:thunderbolt_fire"
+    ]
+  },
+  "grenade_bounce": {
+    "subtitle": "sounds.cubic_quake.grenade_bounce",
+    "sounds": [
+      "cubic_quake:grenade_bounce"
+    ]
+  }
+}
