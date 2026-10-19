@@ -46,5 +46,29 @@
     "sounds": [
       "cubic_quake:grenade_bounce"
     ]
+  },
+  "quad_damage_start": {
+    "subtitle": "sounds.cubic_quake.quad_damage_start",
+    "sounds": [
+      "cubic_quake:quad_damage_start"
+    ]
+  },
+  "quad_damage_end": {
+    "subtitle": "sounds.cubic_quake.quad_damage_end",
+    "sounds": [
+      "cubic_quake:quad_damage_end"
+    ]
+  },
+  "ring_of_shadows_start": {
+    "subtitle": "sounds.cubic_quake.ring_of_shadows_start",
+    "sounds": [
+      "cubic_quake:ring_of_shadows_start"
+    ]
+  },
+  "pentagram_of_protection_start": {
+    "subtitle": "sounds.cubic_quake.pentagram_of_protection_start",
+    "sounds": [
+      "cubic_quake:pentagram_of_protection_start"
+    ]
   }
 }

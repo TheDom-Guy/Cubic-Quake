@@ -29,7 +29,7 @@ public class CubicQuake implements ModInitializer {
 	public static final RegistryKey<DamageType> CUBIC_QUAKE_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(MOD_ID, "cubic_quake_damage"));
 
 	public static final RegistryEntry<StatusEffect> QUAD_DAMAGE_EFFECT = Registry.registerReference(
-			Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "quad_damage"), new QuadDamageEffect().applySound(SoundEvents.BLOCK_ANVIL_LAND));
+			Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "quad_damage"), new QuadDamageEffect());
 
 	public static final RegistryEntry<StatusEffect> PENTAGRAM_PROTECTION_EFFECT = Registry.registerReference(
 			Registries.STATUS_EFFECT, Identifier.of(MOD_ID, "pentagram_protection"), new PentagramProtectionEffect()

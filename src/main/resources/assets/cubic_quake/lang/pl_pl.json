@@ -36,5 +36,9 @@
   "sounds.cubic_quake.grenade_launcher_fire": "Granatnik strzela",
   "sounds.cubic_quake.rocket_launcher_fire": "Wyrzutnia rakiet strzela",
   "sounds.cubic_quake.thunderbolt_fire": "Piorun strzela",
-  "sounds.cubic_quake.grenade_bounce": "Granat odbija się"
+  "sounds.cubic_quake.grenade_bounce": "Granat odbija się",
+
+  "sounds.cubic_quake.quad_damage_start": "Cztero-grzmot zostaje użyty",
+  "sounds.cubic_quake.ring_of_shadows_start": "Pierścień Cieni zostaje użyty",
+  "sounds.cubic_quake.pentagram_of_protection_start": "Pentagram ochrony zostaje użyty"
 }

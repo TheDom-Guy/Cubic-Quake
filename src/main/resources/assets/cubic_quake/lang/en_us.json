@@ -36,5 +36,9 @@
   "sounds.cubic_quake.grenade_launcher_fire": "Grenade launcher fires",
   "sounds.cubic_quake.rocket_launcher_fire": "Rocket launcher fires",
   "sounds.cubic_quake.thunderbolt_fire": "Thunderbolt fires",
-  "sounds.cubic_quake.grenade_bounce": "Grenade bounces"
+  "sounds.cubic_quake.grenade_bounce": "Grenade bounces",
+
+  "sounds.cubic_quake.quad_damage_start": "Quad damage activates",
+  "sounds.cubic_quake.ring_of_shadows_start": "Ring of shadows activates",
+  "sounds.cubic_quake.pentagram_of_protection_start": "Pentagram of protection activates"
 }

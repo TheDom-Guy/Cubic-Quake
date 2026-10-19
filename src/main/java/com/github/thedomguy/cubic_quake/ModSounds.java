@@ -14,6 +14,10 @@ public class ModSounds {
     public static final SoundEvent GRENADE_LAUNCHER_FIRE = registerSoundEvent("grenade_launcher_fire");
     public static final SoundEvent ROCKET_LAUNCHER_FIRE = registerSoundEvent("rocket_launcher_fire");
     public static final SoundEvent THUNDERBOLT_FIRE = registerSoundEvent("thunderbolt_fire");
+    public static final SoundEvent QUAD_DAMAGE_START = registerSoundEvent("quad_damage_start");
+    public static final SoundEvent QUAD_DAMAGE_END = registerSoundEvent("quad_damage_end");
+    public static final SoundEvent RING_OF_SHADOWS_START = registerSoundEvent("ring_of_shadows_start");
+    public static final SoundEvent PENTAGRAM_OF_PROTECTION_START = registerSoundEvent("pentagram_of_protection_start");
 
     public static final SoundEvent GRENADE_BOUNCE = registerSoundEvent("grenade_bounce");
 
