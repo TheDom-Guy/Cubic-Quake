@@ -6,6 +6,7 @@ import com.github.thedomguy.cubic_quake.entities.NailProjectile;
 import com.github.thedomguy.cubic_quake.entities.WeaponProjectile;
 import com.github.thedomguy.cubic_quake.items.weapons.NailgunItem;
 import com.github.thedomguy.cubic_quake.items.weapons.ShotgunItem;
+import com.github.thedomguy.cubic_quake.items.weapons.ThunderboltItem;
 import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -134,6 +135,10 @@ public class WeaponItem extends Item implements GeoItem {
         if (wp != null) {
             serverWorld.spawnEntity(wp);
             serverWorld.playSoundFromEntity(null, user, fireSound, SoundCategory.PLAYERS, 0.6f, 1);
+        }
+
+        if (this instanceof ThunderboltItem && user.isSubmergedInWater()) {
+            user.damage(new DamageSource(serverWorld.getDamageSources().registry.entryOf(CubicQuake.CUBIC_QUAKE_DAMAGE)), damage * 2);
         }
 
         if (this instanceof NailgunItem) {

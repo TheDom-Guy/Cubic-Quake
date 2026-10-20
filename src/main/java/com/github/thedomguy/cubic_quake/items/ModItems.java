@@ -41,9 +41,9 @@ public class ModItems {
     public static final Item DOUBLE_BARRELLED_SHOTGUN = registerItem("double_barrelled_shotgun", new DoubleBarrelledShotgunItem(new Item.Settings(), Weapons.DOUBLE_BARRELLED_SHOTGUN));
     public static final Item NAILGUN = registerItem("nailgun", new NailgunItem(new Item.Settings(), Weapons.NAILGUN));
     public static final Item SUPER_NAILGUN = registerItem("super_nailgun", new SuperNailgunItem(new Item.Settings(), Weapons.SUPER_NAILGUN));
-    public static final Item THUNDERBOLT = registerItem("thunderbolt", new ThunderboltItem(new Item.Settings(), Weapons.THUNDERBOLT));
     public static final Item GRENADE_LAUNCHER = registerItem("grenade_launcher", new GrenadeLauncherItem(new Item.Settings(), Weapons.GRENADE_LAUNCHER));
     public static final Item ROCKET_LAUNCHER = registerItem("rocket_launcher", new RocketLauncherItem(new Item.Settings(), Weapons.ROCKET_LAUNCHER));
+    public static final Item THUNDERBOLT = registerItem("thunderbolt", new ThunderboltItem(new Item.Settings(), Weapons.THUNDERBOLT));
 
     //Powerups
     public static final Item QUAD_DAMAGE = registerItem("quad_damage", new PowerupItem(new Item.Settings(), Powerups.QUAD_DAMAGE));
@@ -63,17 +63,17 @@ public class ModItems {
                         entries.add(DOUBLE_BARRELLED_SHOTGUN);
                         entries.add(NAILGUN);
                         entries.add(SUPER_NAILGUN);
-                        entries.add(THUNDERBOLT);
                         entries.add(GRENADE_LAUNCHER);
                         entries.add(ROCKET_LAUNCHER);
+                        entries.add(THUNDERBOLT);
                         entries.add(SHELL);
                         entries.add(NAIL);
-                        entries.add(CELL);
                         entries.add(ROCKET);
+                        entries.add(CELL);
                         entries.add(ModBlocks.BOX_OF_SHELLS);
                         entries.add(ModBlocks.BOX_OF_NAILS);
-                        entries.add(ModBlocks.BOX_OF_CELLS);
                         entries.add(ModBlocks.BOX_OF_ROCKETS);
+                        entries.add(ModBlocks.BOX_OF_CELLS);
                         entries.add(QUAD_DAMAGE);
                         entries.add(RING_OF_SHADOWS);
                         entries.add(PENTAGRAM_OF_PROTECTION);

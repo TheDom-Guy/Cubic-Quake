@@ -71,24 +71,6 @@ public class LightningProjectile extends WeaponProjectile{
         if (hit instanceof LivingEntity && !(hit == getOwner())) {
             hit.damage(ds, dmg);
 
-            BlockState state = getWorld().getBlockState(hit.getBlockPos());
-
-            if (state.isOf(Blocks.WATER)) {
-
-                for(LivingEntity livingEntity3 : this.getWorld().getNonSpectatingEntities(LivingEntity.class, hit.getBoundingBox().expand(3.0F, 0.25F, 3.0F))) {
-
-                    if (livingEntity3 != hit &&
-                            !this.isTeammate(livingEntity3) &&
-                            (!(livingEntity3 instanceof ArmorStandEntity) || !((ArmorStandEntity)livingEntity3).isMarker()) &&
-                            getWorld().getBlockState(livingEntity3.getBlockPos()).isOf(Blocks.WATER))
-                    {
-
-                        livingEntity3.damage(ds, dmg * 1.5f);
-                    }
-                }
-
-            }
-
             this.discard();
         }
 
