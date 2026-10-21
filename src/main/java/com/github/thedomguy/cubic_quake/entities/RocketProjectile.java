@@ -77,7 +77,7 @@ public class RocketProjectile extends WeaponProjectile{
                 this.getX(),
                 this.getY(),
                 this.getZ(),
-                1.5F,
+                2F,
                 false,
                 World.ExplosionSourceType.TRIGGER,
                 ParticleTypes.EXPLOSION,
