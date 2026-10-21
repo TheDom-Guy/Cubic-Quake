@@ -3,6 +3,7 @@ package com.github.thedomguy.cubic_quake.items;
 import com.github.thedomguy.cubic_quake.CubicQuake;
 import com.github.thedomguy.cubic_quake.blocks.ModBlocks;
 import com.github.thedomguy.cubic_quake.items.weapons.*;
+import com.github.thedomguy.cubic_quake.items.weapons.AxeItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
@@ -25,7 +26,7 @@ public class ModItems {
     public static final Item ROCKET = registerItem("rocket", new Item(new Item.Settings()));
 
     //Weapons
-    public static final Item AXE = registerItem("axe", new Item(new Item.Settings().maxCount(1).attributeModifiers(AttributeModifiersComponent.builder()
+    public static final Item AXE = registerItem("axe", new AxeItem(new Item.Settings().maxCount(1).attributeModifiers(AttributeModifiersComponent.builder()
             .add(
                     EntityAttributes.GENERIC_ATTACK_DAMAGE,
                     new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 1.0, EntityAttributeModifier.Operation.ADD_VALUE),
