@@ -1,10 +1,13 @@
 package com.github.thedomguy.cubic_quake.items.weapons;
 
 import com.github.thedomguy.cubic_quake.CubicQuake;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class AxeItem extends Item {
     public AxeItem(Settings settings) {
@@ -21,5 +24,9 @@ public class AxeItem extends Item {
             return 0;
         }
 
+    }
+
+    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
+        return !miner.isCreative();
     }
 }

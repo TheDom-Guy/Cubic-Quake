@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "cubic_quake:axe"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:iron_ingot"
+  }
+}
